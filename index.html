@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prashant Budha Magar | Video Editor & Videographer</title>
+<meta name="description" content="Video editing, color grading, videography and photography by Prashant Budha Magar. Commercials, event highlights, testimonials and reels.">
+<meta property="og:title" content="Prashant Budha Magar | Video Editor & Videographer">
+<meta property="og:description" content="Commercials, event highlights, testimonials, reels and photography.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+:root {
+  --bg: #111111;
+  --fg: #efece6;
+  --title: #cfccc5;
+  --muted: #8f8f8c;
+  --line: #2a2a29;
+  --frame: #0b0b0b;
+  --font: "Instrument Sans", "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; background: var(--bg); }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--font); font-size: 17px; line-height: 1.55; padding: 0 max(16px, env(safe-area-inset-left, 0px)) 56px; }
+.wrap { max-width: 1400px; margin-inline: auto; }
+a { color: inherit; }
+p { margin: 0; }
+:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
+
+.top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 24px; padding-block: 24px; font-size: 0.92rem; }
+.top .mark { text-decoration: none; font-weight: 600; letter-spacing: 0.02em; }
+.top nav { display: flex; flex-wrap: wrap; gap: 6px 24px; }
+.top nav a { text-decoration: none; color: var(--muted); }
+.top nav a:hover { color: var(--fg); }
+
+.label { font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+h1, h2, h3 { margin: 0; font-weight: 500; letter-spacing: -0.035em; text-wrap: balance; }
+h1 { font-size: clamp(2.5rem, 6.4vw, 5.2rem); line-height: 1.04; max-width: 18ch; }
+h2 { font-size: clamp(2.1rem, 4.4vw, 3.6rem); line-height: 1.08; }
+h3 { font-size: clamp(1.7rem, 3vw, 2.6rem); line-height: 1.1; color: var(--title); letter-spacing: -0.03em; }
+.sub { color: var(--muted); font-size: clamp(1.05rem, 1.6vw, 1.3rem); }
+.desc { color: var(--muted); font-size: 1.08rem; max-width: 52ch; }
+
+.hero { padding-top: clamp(24px, 4vw, 48px); display: grid; gap: 24px; }
+.hero-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 32px; margin-bottom: 8px; }
+.cta { display: flex; flex-wrap: wrap; gap: 14px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 28px; font: inherit; font-size: 1rem; text-decoration: none; border: 1px solid var(--line); background: transparent; color: var(--fg); cursor: pointer; border-radius: 0; }
+.btn:hover { border-color: var(--muted); }
+.btn.solid { background: var(--fg); border-color: var(--fg); color: #151515; }
+.btn.solid:hover { background: #fff; }
+.btn.small { min-height: 40px; padding: 0 16px; font-size: 0.9rem; }
+
+.frame { position: relative; width: 100%; max-width: 100%; overflow: hidden; background: var(--frame); }
+.frame.wide { aspect-ratio: 16 / 9; }
+.frame.tall { aspect-ratio: 9 / 16; }
+.frame iframe, .frame video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: #000; }
+.frame video { object-fit: cover; }
+
+.feature { display: grid; gap: 16px; }
+.credits { display: flex; flex-wrap: wrap; gap: 8px 40px; padding-top: 14px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.98rem; }
+.credits b { color: var(--fg); font-weight: 500; margin-right: 8px; }
+
+section { padding-top: clamp(72px, 10vw, 140px); }
+.sec-head { display: grid; gap: 16px; margin-bottom: clamp(32px, 5vw, 56px); }
+.grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(40px, 5vw, 64px) clamp(20px, 2.4vw, 32px); }
+.item { display: grid; gap: 12px; align-content: start; min-width: 0; }
+.item .label { margin-top: 8px; }
+
+.group { display: grid; gap: 24px; padding-top: clamp(32px, 5vw, 56px); border-top: 1px solid var(--line); margin-top: clamp(32px, 5vw, 56px); }
+.group:first-of-type { margin-top: 0; }
+.ghead { display: grid; gap: 8px; }
+.reels { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 250px)); gap: 28px 20px; justify-content: start; }
+.reel { display: grid; gap: 10px; align-content: start; min-width: 0; }
+.reel .t { font-size: 0.98rem; color: var(--title); line-height: 1.35; }
+
+.gallery { columns: 3 320px; column-gap: 24px; }
+.gallery figure { margin: 0 0 32px; break-inside: avoid; }
+.gallery img { display: block; width: 100%; height: auto; background: #1a1a1a; }
+.gallery figcaption { margin-top: 10px; color: var(--muted); font-size: 0.98rem; line-height: 1.45; max-width: 44ch; }
+
+.about { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 32px clamp(32px, 6vw, 96px); align-items: start; }
+.about .text { display: grid; gap: 18px; color: var(--muted); font-size: 1.12rem; max-width: 58ch; }
+.about .text p:first-child { color: var(--fg); font-size: 1.35rem; line-height: 1.45; }
+ul.skills { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+ul.skills li { padding: 16px 0; border-bottom: 1px solid var(--line); font-size: 1.5rem; letter-spacing: -0.02em; color: var(--title); }
+
+.contact h2 { max-width: 16ch; margin-top: 16px; }
+.contact-list { display: grid; gap: 0; margin-top: 36px; border-top: 1px solid var(--line); max-width: 760px; }
+.crow { display: grid; grid-template-columns: 120px minmax(0, 1fr) auto; align-items: center; gap: 12px 20px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.crow .k { color: var(--muted); font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; }
+.crow .v { font-size: clamp(1.05rem, 2.4vw, 1.5rem); letter-spacing: -0.02em; overflow-wrap: anywhere; text-decoration: none; }
+.crow a.v:hover { text-decoration: underline; text-underline-offset: 4px; }
+.note { color: var(--muted); margin-top: 24px; }
+footer { margin-top: clamp(72px, 10vw, 120px); padding-top: 20px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; color: var(--muted); font-size: 0.9rem; }
+
+@media (max-width: 760px) {
+  .grid2, .about { grid-template-columns: minmax(0, 1fr); }
+  .reels { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 14px; }
+  .crow { grid-template-columns: minmax(0, 1fr) auto; }
+  .crow .k { grid-column: 1 / -1; }
+  .gallery { columns: 2 150px; column-gap: 14px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<div class="wrap" id="top">
+  <div class="top">
+    <a class="mark" href="#top">PBM /</a>
+    <nav aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#reels">Reels</a>
+      <a href="#photography">Photography</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+
+  <header class="hero">
+    <p class="label">Prashant Budha Magar</p>
+    <h1>Crafting stories through visuals, color and sound.</h1>
+    <div class="hero-row">
+      <p class="sub">Video Editor &amp; Creative Media Specialist</p>
+      <div class="cta">
+        <a class="btn solid" href="#work">View My Work</a>
+        <a class="btn" href="#contact">Contact Me</a>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="frame wide"><video controls playsinline preload="metadata" src="videos/gurukulam-school-commercial.mp4" aria-label="The Gurukulam School commercial"></video></div>
+      <div class="credits">
+        <span><b>Featured film</b>The Gurukulam School commercial</span>
+        <span><b>Camera</b>Prashant Budha Magar</span>
+        <span><b> Edit</b>Sushan Chapagain</span>
+        <span><b>Drone shots</b>Prashant Amagain</span>
+      </div>
+    </div>
+  </header>
+
+  <section id="work">
+    <div class="sec-head">
+      <h2>A feeling. A frame. A story.</h2>
+      <p class="sub">Video Editing / Color Grading / Videography / Photography</p>
+    </div>
+    <div class="grid2">
+      <article class="item">
+        <div class="frame wide"><video controls playsinline preload="metadata" src="videos/cricket-highlight.mp4" aria-label="AYM Laxman Agrwal Memorial Cup highlights"></video></div>
+        <p class="label">Video Editing · Sports highlight</p>
+        <h3>AYM Laxman Agrwal Memorial Cup</h3>
+        <p class="desc">A cricket highlight film from the tournament, cut for pace and the big moments.</p>
+      </article>
+      <article class="item">
+        <div class="frame wide"><video controls playsinline preload="metadata" src="videos/personal-film.mp4" aria-label="Personal film from unused footage"></video></div>
+        <p class="label">Video Editing · Personal film</p>
+        <h3>Made from unused footage</h3>
+        <p class="desc">A simple personal edit built entirely from raw footage that was set aside as unusable.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="reels">
+    <div class="sec-head">
+      <h2>Reels.</h2>
+      <p class="sub">Vertical edits for brands, events and social feeds · 9:16</p>
+    </div>
+    
+    <div class="group">
+      <div class="ghead"><p class="label">Eyewear brand</p><h3>TomHardy Exclusive</h3><p class="desc">Models in sunglasses, shot for the brand&#x27;s social feed.</p></div>
+      <div class="reels"><div class="reel"><div class="frame tall"><video controls playsinline preload="metadata" src="videos/sunglasses-reel-1.mp4" aria-label="Sunglasses reel 1"></video></div><p class="t">Sunglasses reel 1</p></div><div class="reel"><div class="frame tall"><video controls playsinline preload="metadata" src="videos/sunglasses-reel-2.mp4" aria-label="Sunglasses reel 2"></video></div><p class="t">Sunglasses reel 2</p></div><div class="reel"><div class="frame tall"><video controls playsinline preload="metadata" src="videos/sunglasses-reel-3.mp4" aria-label="Sunglasses reel 3"></video></div><p class="t">Sunglasses reel 3</p></div><div class="reel"><div class="frame tall"><video controls playsinline preload="metadata" src="videos/sunglasses-reel-4.mp4" aria-label="Sunglasses reel 4"></video></div><p class="t">Sunglasses reel 4</p></div></div>
+    </div>
+    <div class="group">
+      <div class="ghead"><p class="label">Events and testimonials</p><h3>AYM</h3><p class="desc">Highlights and real voices from AYM events.</p></div>
+      <div class="reels"><div class="reel"><div class="frame tall"><video controls playsinline preload="metadata" src="videos/aym-winner-highlight.mp4" aria-label="Dance Dhamaka 2.0 winner highlight"></video></div><p class="t">Dance Dhamaka 2.0 winner highlight</p></div><div class="reel"><div class="frame tall"><video controls playsinline preload="metadata" src="videos/aym-parents-experience.mp4" aria-label="Dance Dhamaka 2.0 final: parents' experience"></video></div><p class="t">Dance Dhamaka 2.0 final: parents&#x27; experience</p></div><div class="reel"><div class="frame tall"><video controls playsinline preload="metadata" src="videos/aym-new-year-testimonial.mp4" aria-label="New Year party testimonial"></video></div><p class="t">New Year party testimonial</p></div></div>
+    </div>
+    <div class="group">
+      <div class="ghead"><p class="label">Client testimonials</p><h3>Chhapadiya Traders</h3><p class="desc">Customers talk about how the product worked for them.</p></div>
+      <div class="reels"><div class="reel"><div class="frame tall"><video controls playsinline preload="metadata" src="videos/client-testimonial-1.mp4" aria-label="Client testimonial 1"></video></div><p class="t">Client testimonial 1</p></div><div class="reel"><div class="frame tall"><video controls playsinline preload="metadata" src="videos/client-testimonial-2.mp4" aria-label="Client testimonial 2"></video></div><p class="t">Client testimonial 2</p></div></div>
+    </div>
+    <div class="group">
+      <div class="ghead"><p class="label">Instagram content</p><h3>B&amp;G Education</h3><p class="desc">UK content made for Instagram.</p></div>
+      <div class="reels"><div class="reel"><div class="frame tall"><video controls playsinline preload="metadata" src="videos/bng-education.mp4" aria-label="UK content for Instagram"></video></div><p class="t">UK content for Instagram</p></div></div>
+    </div>
+    <div class="group">
+      <div class="ghead"><p class="label">Personal</p><h3>Light, angles and places</h3><p class="desc">Shot for myself to practise light, framing and movement.</p></div>
+      <div class="reels">
+        <div class="reel"><div class="frame tall"><video controls playsinline preload="metadata" src="videos/sundarijal-waterfall.mp4" aria-label="Sundarijal waterfall"></video></div><p class="t">Sundarijal waterfall</p></div>
+      </div>
+    </div>
+  </section>
+ 
+  <section id="photography">
+    <div class="sec-head">
+      <p class="label">Photography</p>
+      <h2>Where it started.</h2>
+      <p class="sub">I began with a phone and a habit of photographing everything I saw. These are some of the frames that taught me how to see.</p>
+    </div>
+    <div class="gallery">
+<figure><img src="photos/photo-01.jpg" width="991" height="978" alt="Two boys chase one ball on a school ground." loading="lazy" decoding="async"><figcaption>Game day. For a second nothing else exists but the ball.</figcaption></figure>
+<figure><img src="photos/photo-02.jpg" width="734" height="978" alt="Close view of a carved wooden face." loading="lazy" decoding="async"><figcaption>Showcase of craftsmanship.</figcaption></figure>
+<figure><img src="photos/photo-03.jpg" width="1304" height="978" alt="Pine trees on a ridge above a valley of cloud." loading="lazy" decoding="async"><figcaption>Morning on a pine ridge, with clouds sitting low in the valley.</figcaption></figure>
+<figure><img src="photos/photo-04.jpg" width="1062" height="978" alt="A woman holds a red bear balloon on a busy street." loading="lazy" decoding="async"><figcaption>The crowd blurs and the smile remains sharp.</figcaption></figure>
+<figure><img src="photos/photo-05.jpg" width="959" height="539" alt="Pigeons on the stones of a temple square with people and pagodas behind." loading="lazy" decoding="async"><figcaption>Chaos within the calmness.</figcaption></figure>
+<figure><img src="photos/photo-06.jpg" width="959" height="696" alt="A little girl in a pink outfit sits on a patterned sofa." loading="lazy" decoding="async"><figcaption>Capturing moments of joy.</figcaption></figure>
+<figure><img src="photos/photo-07.jpg" width="959" height="864" alt="A baby in a red velvet vest sits among gold-trimmed cushions." loading="lazy" decoding="async"><figcaption>Innocence captured in soft light.</figcaption></figure>
+<figure><img src="photos/photo-08.jpg" width="959" height="979" alt="Neon sign reflections on a car windshield at night." loading="lazy" decoding="async"><figcaption>Neon night on a Kathmandu street.</figcaption></figure>
+<figure><img src="photos/photo-09.jpg" width="959" height="539" alt="A young man in a dark hoodie at night with a lit temple behind him." loading="lazy" decoding="async"><figcaption>Night portrait in natural light.</figcaption></figure>
+<figure><img src="photos/photo-10.jpg" width="959" height="539" alt="A young man in a jacket at night with a lit temple behind him." loading="lazy" decoding="async"><figcaption>Same spot, same mood.</figcaption></figure>
+<figure><img src="photos/photo-11.jpg" width="6000" height="3368" alt="Portrait through a glass surface with city light trails at night." loading="lazy" decoding="async"><figcaption>City lights in motion.</figcaption></figure>
+<figure><img src="photos/photo-12.jpg" width="6000" height="3368" alt="Portrait layered with colourful night traffic and foliage." loading="lazy" decoding="async"><figcaption>Layers after dark.</figcaption></figure>
+<figure><img src="photos/photo-13.jpg" width="6000" height="3368" alt="Portrait beside yellow graffiti on a wall at night." loading="lazy" decoding="async"><figcaption>Yellow wall, quiet moment.</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="sec-head">
+      <p class="label">Behind the edit</p>
+      <h2>Thoughtful edits. Lasting impressions.</h2>
+    </div>
+    <div class="about">
+      <div class="text">
+        <p>I'm Prashant, a video editor and creative media specialist with experience in educational, promotional, interview and social media content.</p>
+        <p>My journey started with a simple phone, photographing anything I could see. I failed many times and learned most things by doing, and I took feedback from other professionals along the way.</p>
+        <p>I began with photography. As my passion grew, I decided to take the next step and work professionally as a videographer too. I learned angles and shots by watching movies and other professionals.</p>
+        <p>I still believe there is always room to grow and learn.</p>
+      </div>
+      <ul class="skills">
+        <li>Video Editing</li>
+        <li>Color Grading</li>
+        <li>Sound Design</li>
+        <li>Videography</li>
+        <li>Photography</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <p class="label">Get in touch</p>
+    <h2>Let's make something worth watching.</h2>
+    <div class="contact-list">
+      <div class="crow"><span class="k">Email</span><a class="v" href="mailto:prashantbmagar67@gmail.com" id="email">prashantbmagar67@gmail.com</a><button class="btn small" type="button" data-copy="email">Copy</button></div>
+      <div class="crow"><span class="k">Phone</span><a class="v" href="tel:+9779769289759" id="phone">+977 9769289759</a><button class="btn small" type="button" data-copy="phone">Copy</button></div>
+      <div class="crow"><span class="k">Instagram</span><a class="v" href="https://www.instagram.com/noones.prashant" target="_blank" rel="noopener">@noones.prashant</a><span></span></div>
+      <div class="crow"><span class="k">LinkedIn</span><a class="v" href="https://www.linkedin.com/in/prashant-budha-magar-65818537b/" target="_blank" rel="noopener">Prashant Budha Magar</a><span></span></div>
+    </div>
+    <p class="note">Open to hiring inquiries.</p>
+  </section>
+
+  <footer>
+    <span>© Prashant Budha Magar</span>
+    <span>Video editor · Videographer · Photographer</span>
+  </footer>
+</div>
+
+<script>
+document.querySelectorAll('[data-copy]').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var el = document.getElementById(btn.getAttribute('data-copy'));
+    var text = el.textContent;
+    var reset = function (t) { btn.textContent = t; setTimeout(function () { btn.textContent = 'Copy'; }, 1800); };
+    var fallback = function () {
+      try { var r = document.createRange(); r.selectNodeContents(el); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); reset('Selected'); } catch (e) {}
+    };
+    try { navigator.clipboard.writeText(text).then(function () { reset('Copied'); }, fallback); } catch (e) { fallback(); }
+  });
+});
+</script>
+</body>
+</html>
